@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: musicstore-deployment
+  labels:
+    app: musicstore
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: musicstore
+  template:
+    metadata:
+      labels:
+        app: musicstore
+    spec:
+      containers:
+        - name: musicstore
+          image: urk22cs1024/musicstore:latest
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: Always
