@@ -1,15 +1,15 @@
 body {
-  background-color: #f9fafb;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #3d3d3d);
 }
-h1, h2 {
-  color: #333;
+.card {
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
-.card img {
-  height: 220px;
-  object-fit: cover;
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255,255,255,0.2);
 }
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
+.btn {
+    border-radius: 10px;
 }
