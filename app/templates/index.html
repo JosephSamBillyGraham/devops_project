@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Music Store</title>
-</head>
-<body>
-    <h1>Welcome to the Music Store!</h1>
-    <ul>
-        {% for item in instruments %}
-            <li>{{ item.name }} - {{ item.price }}</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center mt-5">
+  <h1>Welcome to Music Store 🎶</h1>
+  <p>Your one-stop shop for instruments that inspire creativity.</p>
+  <a href="{{ url_for('products') }}" class="btn btn-primary mt-3">Explore Products</a>
+</div>
+{% endblock %}
