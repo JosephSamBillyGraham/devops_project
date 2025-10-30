@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: musicstore-service
 spec:
+  type: LoadBalancer
   selector:
     app: musicstore
-  type: NodePort
   ports:
     - protocol: TCP
       port: 80
       targetPort: 5000
-      nodePort: 30007

@@ -16,7 +16,9 @@ spec:
     spec:
       containers:
         - name: musicstore
-          image: urk22cs1024/musicstore:latest
+          image: josephmusicstoreacr.azurecr.io/musicstore:latest
           ports:
             - containerPort: 5000
           imagePullPolicy: Always
+      imagePullSecrets:
+        - name: acr-secret
